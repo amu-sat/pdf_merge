@@ -16,15 +16,15 @@ class PDFZipMerger(TkinterDnD.Tk):
     def __init__(self):
         super().__init__()
         tb.Style("flatly")
-        self.title("PDF ZIP Merger")
+        self.title("NHDC Document Unzip and Merge Suite")
         self.geometry("720x420")
         self.zip_file = None
 
-        tb.Label(self, text="PDF ZIP Merger", font=("Segoe UI", 20, "bold")).pack(pady=12)
+        tb.Label(self, text="NHDC Document Unzip and Merge Suite", font=("Segoe UI", 20, "bold")).pack(pady=12)
 
         self.drop = tb.Label(
             self,
-            text="Drag && Drop ZIP Here\n\nor\n\nClick Browse",
+            text="Drag and Drop ZIP Here\n\nor\n\nClick Browse",
             relief="ridge",
             anchor="center",
             padding=30
@@ -41,7 +41,7 @@ class PDFZipMerger(TkinterDnD.Tk):
         self.progress = tb.Progressbar(self, maximum=100)
         self.progress.pack(fill="x", padx=20, pady=10)
 
-        tb.Button(self, text="Merge PDFs", command=self.merge_clicked, bootstyle="success").pack(pady=12)
+        tb.Button(self, text="Merge PDFs (Click to enter file name)", command=self.merge_clicked, bootstyle="success").pack(pady=12)
 
     def browse(self):
         f = filedialog.askopenfilename(filetypes=[("ZIP Files","*.zip")])
