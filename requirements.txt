@@ -1,0 +1,5 @@
+ttkbootstrap>=1.14.2
+tkinterdnd2>=0.4.2
+pypdf>=5.7.0
+natsort>=8.4.0
+pyinstaller>=6.11.0
